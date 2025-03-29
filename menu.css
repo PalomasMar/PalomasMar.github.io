@@ -1,0 +1,132 @@
+/* Estilos generales */
+body {
+    background-color: #F5DEB3;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Título del menú */
+.titulo-menu {
+    font-size: 3em;
+    text-align: center;
+    color: #8B4513;
+    margin: 20px 0;
+}
+
+/* Invitación */
+.invitacion {
+    font-family: 'Pacifico', cursive;
+    color: #D45D0D;
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* Imagen decorativa */
+.arena-titulo {
+    width: 80px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Carrusel de imágenes */
+.menu-carrusel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 10px;
+    gap: 10px;
+    justify-content: flex-start; /* Cambié a 'flex-start' para evitar el alineado al centro */
+    max-width: 90%;
+    margin: 0 auto;
+    width: 100%; /* Asegura que el contenedor ocupe todo el espacio disponible */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+.menu-carrusel img {
+    width: 80%;  /* Se reduce el tamaño */
+    max-width: 250px; /* Límite de tamaño */
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    border-radius: 8px;
+}
+
+/* Sección de platillos más pedidos */
+.platillos-mas-pedidos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Columnas */
+.columna {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Estilo de los títulos en cada columna */
+.columna h2 {
+    text-align: center;
+    color: #8B4513;
+}
+
+/* Estilos de cada platillo */
+.platillo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+.imagen-platillo {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.descripcion-platillo h3 {
+    font-family: 'Pacifico', cursive;
+    color: #D45D0D;
+    margin: 0;
+}
+
+.descripcion-platillo p {
+    font-size: 0.9em;
+    text-align: justify;
+}
+
+/* Media queries para ajustes en pantallas pequeñas */
+@media (max-width: 768px) {
+    .titulo-menu {
+        font-size: 2em;
+    }
+
+    .menu-carrusel {
+        max-width: 95%; /* Ajusta el ancho en móviles */
+    }
+
+    .menu-carrusel img {
+        width: 70%;
+        max-width: 200px;
+    }
+
+    .platillos-mas-pedidos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .platillo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imagen-platillo {
+        width: 80px;
+    }
+}

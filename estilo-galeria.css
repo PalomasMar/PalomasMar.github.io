@@ -1,0 +1,151 @@
+/* Estilos generales */
+body {
+  font-family: 'Pacifico', cursive;
+  background-color: #f5deb3;
+  color: #A0522D;
+}
+
+header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+/* Estilo base para galeria-header */
+.galeria-header {
+  border: 3px double #8B4513;  
+  padding: 5px 15px;  /* Espacio más pequeño arriba y abajo */
+  margin: 10px 0;  /* Mantén margen normal */
+  text-align: center; 
+  background-color: #DEB887; 
+  border-radius: 4px; 
+  font-size: 14px; 
+  width: 30%; 
+  min-width: 150px; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+/* Estilo para el título dentro de galeria-header */
+.galeria-header h2 {
+  font-size: 35px; 
+  color: #8B4513; 
+  margin-top: 10px;
+  line-height: 1.2;  /* Menos espacio vertical entre líneas */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .galeria-header {
+    width: 80%;  /* Reduce el tamaño del contenedor */
+    padding: 5px 10px;  /* Menos espacio dentro del contenedor */
+  }
+
+  .galeria-header h2 {
+    font-size: 25px;  /* Tamaño de fuente más pequeño */
+    margin-top: 5px;  /* Menos margen arriba */
+    line-height: 2.0;  /* Reduce el espacio entre las líneas */
+  }
+}
+
+
+.galeria-header p{
+  font-size: 20px; 
+  color: #8B4513; 
+  margin-top: -40px;
+}
+
+/* Estilos de las secciones */
+.seccion {
+  margin: 30px 0; 
+  padding: 10px 20px;
+  background-color: #D2691E; 
+  border-radius: 8px;
+  position: relative; 
+  width: 900px; /* Ancho por defecto de la sección */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Títulos de las secciones */
+.seccion h3 {
+  text-align: center;
+  font-size: 30px;
+  color: #FFDAB9;
+  font-family: 'Playfair Display', serif;
+  position: relative; 
+  top: 10px; 
+  margin-bottom: 10px; 
+}
+
+/* Contenedor de imágenes */
+.contenedor-imagenes {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las imágenes se acomoden en varias filas */
+  justify-content: center;
+  gap: 15px;
+}
+
+.contenedor-imagenes img {
+  width: 100%;  /* Las imágenes ocupan el 100% del espacio disponible */
+  max-width: 200px; /* Limita el tamaño máximo de la imagen */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Media query para pantallas menores a 600px (móviles) */
+@media screen and (max-width: 600px) {
+  /* Ajuste de las secciones */
+  .seccion {
+    width: 95%; /* Hacemos el contenedor más pequeño en pantallas móviles */
+    padding: 5px 10px; /* Reducimos el padding para más espacio */
+  }
+
+  /* Ajuste de los títulos */
+  .seccion h3 {
+    font-size: 20px; /* Reducimos el tamaño del título para pantallas pequeñas */
+  }
+
+  /* Ajuste de la galería de imágenes */
+  .contenedor-imagenes {
+    flex-direction: column; /* Las imágenes se apilan en una columna */
+    align-items: center; /* Alinea las imágenes al centro */
+  }
+
+  /* Ajustes en el tamaño de las imágenes */
+  .contenedor-imagenes img {
+    max-width: 150px;  /* Las imágenes se hacen más pequeñas */
+    width: 100%;  /* Ocupan todo el ancho disponible pero limitadas por el max-width */
+  }
+}
+
+/* Media query para pantallas menores a 900px (tablets y dispositivos más grandes) */
+@media screen and (max-width: 900px) {
+  .seccion {
+    width: 90%; /* Ajustamos el ancho para pantallas más grandes que móviles */
+  }
+
+  .contenedor-imagenes img {
+    max-width: 180px; /* Las imágenes pueden ser un poco más grandes en tablets */
+  }
+}
